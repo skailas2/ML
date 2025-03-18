@@ -139,11 +139,11 @@ def scrape_reddit(subreddit_name, post_type="hot", limit=10):
         csv_filename = f"{subreddit_name}_{post_type}_posts.csv"
         df.to_csv(csv_filename, index=False)
 
-        print(f"✅ Successfully scraped {len(post_data)} posts from r/{subreddit_name}")
-        print(f"📂 Data saved in {csv_filename} and SQLite database")
+        print(f"Successfully scraped {len(post_data)} posts from r/{subreddit_name}")
+        print(f"Data saved in {csv_filename} and SQLite database")
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
 
 def scrape_comments(post_id, limit=5):
     """Scrapes top comments from a post and returns them."""
